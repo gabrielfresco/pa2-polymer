@@ -1,0 +1,52 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="test-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <paper-input id="nombre"></paper-input>
+    <paper-button class="green" raised id="enviar">Enviar</paper-button>
+    <iron-ajax
+      id="myajax"
+      auto
+      url="http://echo.jsontest.com/insert-key-here/insert-value-here/key/value"
+      handle-as="json"
+      on-response="{{handleResponse}}"
+      on-errpr="handleError">
+
+    </iron-ajax>
+  </template>
+
+  <script>
+    /**
+     * @customElement0.
+
+     * @polymer
+     */
+    class TestApp extends Polymer.Element {
+      static get is() { return 'test-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'test-app'
+          }
+        };
+      }
+
+     
+    }
+
+    handleResponse: (event) => {
+        console.log("_handleResponse... ");
+    }
+    window.customElements.define(TestApp.is, TestApp);
+  </script>
+</dom-module>

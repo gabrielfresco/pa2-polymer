@@ -1,0 +1,19 @@
+{
+  "name": "pa2-polymer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielfresco/pa2-polymer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielfresco/pa2-polymer/issues"
+  },
+  "homepage": "https://github.com/gabrielfresco/pa2-polymer#readme",
+  "description": ""
+}
